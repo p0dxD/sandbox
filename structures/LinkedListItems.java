@@ -59,6 +59,10 @@ public class LinkedListItems<T> {
         return this.size;
     }
     
+    public T getHead() {
+        return this.items != null? items.getItem(): null;
+    }
+
     public void removeItem(Item<T> item) {
         if (item == null) {
             return;
