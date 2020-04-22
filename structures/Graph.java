@@ -28,6 +28,10 @@ public class Graph<T> {
         }
     }
     
+    public HashMap<Vertex<T>, LinkedListItems<Vertex<T>>> getContents() {
+        return this.graph;
+    }
+    
     public void printGraph() {
         System.out.println("Printing graph contents");
         for (Vertex<T> vertex: vertices) {

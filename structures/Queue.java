@@ -10,13 +10,13 @@ public class Queue<T> {
         items.addItem(item);
     }
 
-    public T remove() {
+    public T poll() {
         T tmp = items.getHead();
         items.removeItem(tmp);
         return tmp;
     }
 
-    public T poll() {
+    public T peek() {
         return items.getHead();
     }
 

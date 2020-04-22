@@ -92,16 +92,18 @@ class Playground {
         queue.add(4);
         queue.add(5);
         System.out.println(queue.size());
+        System.out.println(queue.peek());
         System.out.println(queue.poll());
-        System.out.println(queue.remove());
+        System.out.println(queue.peek());
         System.out.println(queue.poll());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
-        System.out.println(queue.remove());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+
+        BFS.bfs(graph, one);
     }
 }
 
