@@ -45,7 +45,7 @@ public class LinkedListItems<T> {
             Item<T> crs = items;
             while(crs != null) {
                 if (crs.getItem().equals(item)) {
-                    prev = crs.nextItem;
+                    prev.nextItem = crs.nextItem;
                     size--;
                 }
                 prev = crs;
@@ -70,7 +70,7 @@ public class LinkedListItems<T> {
             Item<T> crs = items;
             while(crs != null) {
                 if (crs.equals(item)) {
-                    prev = crs.nextItem;
+                    prev.nextItem = crs.nextItem;
                     size--;
                 }
                 prev = crs;

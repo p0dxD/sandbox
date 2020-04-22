@@ -15,8 +15,9 @@ class Playground {
         itemsList.addItem("Testing-Item2");
         itemsList.addItem("Testing-Item3");
         itemsList.addItem("Testing-Item4");
+        itemsList.addItem("Testing-Item5");
         itemsList.printItems();
-        itemsList.removeItem("Testing-Item");
+        itemsList.removeItem("Testing-Item3");
         itemsList.printItems();
         itemsList.addItem("Testing-Item");
         itemsList.printItems();
