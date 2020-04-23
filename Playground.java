@@ -27,6 +27,9 @@ class Playground {
         Vertex<Integer> three = new Vertex<>(3);
         Vertex<Integer> four = new Vertex<>(4);
         Vertex<Integer> five = new Vertex<>(5);
+        //disconnected
+        Vertex<Integer> six = new Vertex<>(6);
+
 
         Edge<Integer> edgeOne = new Edge<>(one, two, 0);
         Edge<Integer> edgeTwo = new Edge<>(one, five, 0);
@@ -50,6 +53,7 @@ class Playground {
         vertices.add(three);
         vertices.add(four);
         vertices.add(five);
+        vertices.add(six);
         ArrayList<Edge<Integer>> edges = new ArrayList<>();
         edges.add(edgeOne);
         edges.add(edgeTwo);
@@ -103,7 +107,9 @@ class Playground {
         System.out.println(queue.poll());
         System.out.println(queue.poll());
 
-        BFS.bfs(graph, one);
+        GraphUtil.bfs(graph, one);
+        graph.resetGraph();
+        System.out.println("Number of components: " + GraphUtil.connectedComponnets(graph));
     }
 }
 

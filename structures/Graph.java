@@ -16,6 +16,10 @@ public class Graph<T> {
 
     @SuppressWarnings (value="unchecked")
     public void initialize() {
+        for (Vertex<T> vertex: vertices) {
+            graph.put(vertex, new LinkedListItems<Vertex<T>>());
+        }
+        
         for (Edge<T> edgePair: edges) {
             Vertex<T> first = (Vertex<T>)edgePair.getValues()[0];
             Vertex<T> second = (Vertex<T>)edgePair.getValues()[1];
@@ -27,11 +31,21 @@ public class Graph<T> {
             }
         }
     }
-    
+
+    public void resetGraph() {
+        for(Vertex<T> vertex: vertices) {
+            vertex.isVisited(false);
+        }
+    }
+
     public HashMap<Vertex<T>, LinkedListItems<Vertex<T>>> getContents() {
         return this.graph;
     }
     
+    public ArrayList<Vertex<T>> getVertices() {
+        return this.vertices;
+    }
+
     public void printGraph() {
         System.out.println("Printing graph contents");
         for (Vertex<T> vertex: vertices) {
